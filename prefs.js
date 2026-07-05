@@ -1,0 +1,10 @@
+pref("extensions.duplicateDoctor.duplicate.default.action", "ask");
+pref("extensions.duplicateDoctor.bulk.master.item", "oldest");
+pref("extensions.duplicateDoctor.duplicate.stats.enable", true);
+pref("extensions.duplicateDoctor.autoDiscardNewDuplicates", true);
+pref("extensions.duplicateDoctor.autoDiscardByDOI", true);
+pref("extensions.duplicateDoctor.autoDiscardByISBN", true);
+pref("extensions.duplicateDoctor.trashChildrenWithDuplicate", true);
+pref("extensions.duplicateDoctor.showNotifications", true);
+pref("extensions.duplicateDoctor.safeMergeWebpageIntoArticle", true);
+pref("extensions.duplicateDoctor.masterItem", "oldest");

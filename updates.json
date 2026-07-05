@@ -1,0 +1,19 @@
+{
+  "addons": {
+    "duplicate-doctor@pandaaigc.github.io": {
+      "updates": [
+        {
+          "version": "0.2.0",
+          "update_link": "https://github.com/pandaAIGC/zotero-duplicate-doctor/releases/download/v0.2.0/duplicate-doctor.xpi",
+          "update_hash": "sha256:58b425f9094f9b055f37c848cc176c5d32de65623a357db10c88b3c871f2e5c4",
+          "applications": {
+            "zotero": {
+              "strict_min_version": "7.0",
+              "strict_max_version": "10.*"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

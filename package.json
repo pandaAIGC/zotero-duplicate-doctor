@@ -1,0 +1,10 @@
+{
+  "name": "zotero-duplicate-doctor",
+  "version": "0.2.0",
+  "private": true,
+  "scripts": {
+    "check": "node --check bootstrap.js && node --check chrome/content/duplicateDoctor.js",
+    "test": "node tests/helpers.test.js && node tests/preferences.test.js && node tests/settings-binding.test.js && node tests/bulk-merge-policy.test.js && node tests/duplicate-pane-ui.test.js && node tests/performance-policy.test.js && node tests/release-package.test.js && node tests/privacy-scan.test.js",
+    "build": "python scripts/build_xpi.py"
+  }
+}

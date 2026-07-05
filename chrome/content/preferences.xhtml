@@ -1,0 +1,130 @@
+<linkset>
+  <html:link rel="localization" href="duplicate-doctor-preferences.ftl" />
+</linkset>
+
+<vbox id="zotero-prefpane-duplicate-doctor">
+  <vbox class="pref-section">
+    <groupbox>
+      <label>
+        <html:h2 data-l10n-id="duplicate-doctor-pref-action-title"></html:h2>
+      </label>
+      <label data-l10n-id="duplicate-doctor-pref-default-action-description" />
+      <radiogroup id="duplicate-doctor-pref-default-action" native="true" preference="extensions.duplicateDoctor.duplicate.default.action" orient="vertical">
+        <radio value="keep" data-l10n-id="duplicate-doctor-pref-default-action-keep-this" />
+        <radio value="discard" data-l10n-id="duplicate-doctor-pref-default-action-keep-others" />
+        <radio value="cancel" data-l10n-id="duplicate-doctor-pref-default-action-keep-all" />
+        <radio value="ask" data-l10n-id="duplicate-doctor-pref-default-action-always-ask" />
+      </radiogroup>
+    </groupbox>
+  </vbox>
+
+  <vbox class="pref-section">
+    <groupbox>
+      <label>
+        <html:h2 data-l10n-id="duplicate-doctor-pref-auto-title"></html:h2>
+      </label>
+      <label data-l10n-id="duplicate-doctor-pref-auto-description" />
+      <checkbox
+        id="duplicate-doctor-pref-auto-discard"
+        native="true"
+        preference="extensions.duplicateDoctor.autoDiscardNewDuplicates"
+        data-l10n-id="duplicate-doctor-pref-auto-discard"
+      />
+      <checkbox
+        id="duplicate-doctor-pref-doi"
+        native="true"
+        preference="extensions.duplicateDoctor.autoDiscardByDOI"
+        data-l10n-id="duplicate-doctor-pref-doi"
+      />
+      <checkbox
+        id="duplicate-doctor-pref-isbn"
+        native="true"
+        preference="extensions.duplicateDoctor.autoDiscardByISBN"
+        data-l10n-id="duplicate-doctor-pref-isbn"
+      />
+      <checkbox
+        id="duplicate-doctor-pref-trash-children"
+        native="true"
+        preference="extensions.duplicateDoctor.trashChildrenWithDuplicate"
+        data-l10n-id="duplicate-doctor-pref-trash-children"
+      />
+      <checkbox
+        id="duplicate-doctor-pref-notifications"
+        native="true"
+        preference="extensions.duplicateDoctor.showNotifications"
+        data-l10n-id="duplicate-doctor-pref-notifications"
+      />
+    </groupbox>
+  </vbox>
+
+  <vbox class="pref-section">
+    <groupbox>
+      <label>
+        <html:h2 data-l10n-id="duplicate-doctor-pref-master-title"></html:h2>
+      </label>
+      <label data-l10n-id="duplicate-doctor-pref-master-description" />
+      <radiogroup id="duplicate-doctor-pref-master-item" native="true" preference="extensions.duplicateDoctor.bulk.master.item" orient="vertical">
+        <radio value="oldest" data-l10n-id="duplicate-doctor-pref-master-oldest" />
+        <radio value="newest" data-l10n-id="duplicate-doctor-pref-master-newest" />
+        <radio value="modified" data-l10n-id="duplicate-doctor-pref-master-modified" />
+        <radio value="detailed" data-l10n-id="duplicate-doctor-pref-master-detailed" />
+      </radiogroup>
+    </groupbox>
+  </vbox>
+
+  <vbox class="pref-section">
+    <groupbox>
+      <label>
+        <html:h2 data-l10n-id="duplicate-doctor-pref-view-title"></html:h2>
+      </label>
+      <label data-l10n-id="duplicate-doctor-pref-view-description" />
+      <checkbox
+        id="duplicate-doctor-pref-view-duplicate-stats"
+        native="true"
+        preference="extensions.duplicateDoctor.duplicate.stats.enable"
+        data-l10n-id="duplicate-doctor-pref-view-duplicate-stats"
+      />
+    </groupbox>
+  </vbox>
+
+  <vbox class="pref-section">
+    <groupbox>
+      <label>
+        <html:h2 data-l10n-id="duplicate-doctor-pref-merge-title"></html:h2>
+      </label>
+      <checkbox
+        id="duplicate-doctor-pref-merge-webpage"
+        native="true"
+        preference="extensions.duplicateDoctor.safeMergeWebpageIntoArticle"
+        data-l10n-id="duplicate-doctor-pref-merge-webpage"
+      />
+      <description data-l10n-id="duplicate-doctor-pref-safety-note" />
+    </groupbox>
+  </vbox>
+
+  <vbox class="pref-section">
+    <groupbox>
+      <label>
+        <html:h2 data-l10n-id="duplicate-doctor-pref-data-title"></html:h2>
+      </label>
+      <label data-l10n-id="duplicate-doctor-pref-data-description" />
+      <hbox align="center">
+        <button
+          id="duplicate-doctor-pref-export-non-duplicates"
+          data-l10n-id="duplicate-doctor-pref-data-export"
+          oncommand="DuplicateDoctorPrefs.exportNonDuplicates(window)"
+        />
+        <button
+          id="duplicate-doctor-pref-import-non-duplicates"
+          data-l10n-id="duplicate-doctor-pref-data-import"
+          oncommand="DuplicateDoctorPrefs.importNonDuplicates(window)"
+        />
+      </hbox>
+    </groupbox>
+  </vbox>
+</vbox>
+
+<spacer height="20" flex="1" />
+<vbox>
+  <html:label data-l10n-id="duplicate-doctor-pref-help"></html:label>
+</vbox>

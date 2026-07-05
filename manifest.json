@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Duplicate Doctor for Zotero",
+  "version": "0.2.0",
+  "description": "Audits Zotero duplicate groups and safely merges same-DOI webpage records into journal articles.",
+  "author": "pandaAIGC",
+  "homepage_url": "https://github.com/pandaAIGC/zotero-duplicate-doctor",
+  "icons": {
+    "48": "chrome/content/icons/icon.svg",
+    "96": "chrome/content/icons/icon.svg"
+  },
+  "applications": {
+    "zotero": {
+      "id": "duplicate-doctor@pandaaigc.github.io",
+      "update_url": "https://raw.githubusercontent.com/pandaAIGC/zotero-duplicate-doctor/main/updates.json",
+      "strict_min_version": "7.0",
+      "strict_max_version": "10.*"
+    }
+  }
+}
