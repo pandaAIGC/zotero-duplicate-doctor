@@ -7,14 +7,41 @@ Duplicate Doctor is a Zotero 7+ plugin that audits duplicate groups and safely
 handles a common gap left by bulk duplicate workflows: same-DOI records where the
 best item is a `journalArticle` but another copy was imported as a `webpage`.
 
-It is independent software and is not affiliated with Zoplicate. It is designed
-to complement Zotero's built-in duplicate pane and tools such as Zoplicate by
-handling high-confidence cross-type DOI duplicates conservatively.
+It is designed to complement Zotero's built-in duplicate pane and tools such as
+Zoplicate by adding a faster, conservative path for high-confidence cross-type
+DOI duplicates.
+
+## Why Duplicate Doctor?
+
+Duplicate Doctor focuses on safe, low-friction cleanup for real Zotero
+libraries:
+
+- Fast duplicate-pane workflows: duplicate groups are cached briefly, Zotero
+  items are batch-loaded, non-duplicate decisions are preloaded once per scan,
+  and bulk-merge progress updates are throttled to avoid unnecessary UI churn.
+- Focused speed-up over broad duplicate workflows: it targets the expensive
+  review gap that often remains after general duplicate tools, especially
+  same-DOI `webpage` records that should be merged into `journalArticle`
+  masters.
+- Conservative by design: it only auto-discards or auto-merges high-confidence
+  DOI/ISBN matches and leaves ambiguous same-title or conflicting-identifier
+  records for manual review.
+- Trash-first safety: merged webpage records and auto-discarded import
+  duplicates go to the Zotero trash instead of being permanently deleted.
+- Better coverage for messy imports: it handles the common case where one copy
+  is a proper `journalArticle` and another same-DOI copy arrived as a `webpage`.
+- Minimal interruption: import-time deduplication runs in the background after
+  Zotero finishes saving new items, while settings remain available in Zotero's
+  normal preferences UI.
+- Update-ready packaging: releases include a root XPI plus a hashed
+  Mozilla-style `updates.json` for Zotero update checks.
 
 ## Features
 
-- Scan active regular Zotero items for duplicate-risk groups.
-- Classify same-DOI duplicate groups.
+- Scan active regular Zotero items for duplicate-risk groups without repeatedly
+  rescanning unchanged duplicate-pane state.
+- Classify same-DOI duplicate groups and separate confident cleanup candidates
+  from records that need human judgment.
 - Auto-discard newly added/imported high-confidence duplicates by DOI or ISBN.
 - Configure import-time deduplication from `Zotero Settings -> Duplicate Doctor`.
 - Safely merge same-library `webpage` items into same-DOI `journalArticle`
