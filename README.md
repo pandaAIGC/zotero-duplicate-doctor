@@ -1,5 +1,8 @@
 # Duplicate Doctor for Zotero
 
+[![Zotero](https://img.shields.io/badge/Zotero-7%2F8%2F9%2F10-CC2936)](https://www.zotero.org/)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 Duplicate Doctor is a Zotero 7+ plugin that audits duplicate groups and safely
 handles a common gap left by bulk duplicate workflows: same-DOI records where the
 best item is a `journalArticle` but another copy was imported as a `webpage`.
